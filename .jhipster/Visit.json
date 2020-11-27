@@ -1,0 +1,68 @@
+{
+  "name": "Visit",
+  "fields": [
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "targetDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "durationMin",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "patientId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "doctorId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cost",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "visit",
+      "relationshipName": "patientId",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "visit",
+      "relationshipName": "doctorId",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201127225330",
+  "entityTableName": "visit",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

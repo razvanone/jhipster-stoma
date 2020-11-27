@@ -1,0 +1,74 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="visit">
+            <h2><span jhiTranslate="stomaApp.visit.detail.title">Visit</span> {{ visit.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="stomaApp.visit.createdDate">Created Date</span></dt>
+                <dd>
+                    <span>{{ visit.createdDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.updatedDate">Updated Date</span></dt>
+                <dd>
+                    <span>{{ visit.updatedDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.targetDate">Target Date</span></dt>
+                <dd>
+                    <span>{{ visit.targetDate }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.durationMin">Duration Min</span></dt>
+                <dd>
+                    <span>{{ visit.durationMin }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.patientId">Patient Id</span></dt>
+                <dd>
+                    <span>{{ visit.patientId }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.doctorId">Doctor Id</span></dt>
+                <dd>
+                    <span>{{ visit.doctorId }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.title">Title</span></dt>
+                <dd>
+                    <span>{{ visit.title }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.description">Description</span></dt>
+                <dd>
+                    <span>{{ visit.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.cost">Cost</span></dt>
+                <dd>
+                    <span>{{ visit.cost }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.patientId">Patient Id</span></dt>
+                <dd>
+                    <div *ngIf="visit.patientIdId">
+                        <a [routerLink]="['/person', visit.patientIdId, 'view']">{{ visit.patientIdId }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.visit.doctorId">Doctor Id</span></dt>
+                <dd>
+                    <div *ngIf="visit.doctorIdId">
+                        <a [routerLink]="['/person', visit.doctorIdId, 'view']">{{ visit.doctorIdId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/visit', visit.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

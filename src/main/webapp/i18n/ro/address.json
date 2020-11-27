@@ -1,0 +1,25 @@
+{
+  "stomaApp": {
+    "address": {
+      "home": {
+        "title": "Addresses",
+        "createLabel": "Creeare o nouă entitate Address",
+        "createOrEditLabel": "Creeare sau editare Address",
+        "notFound": "No Addresses found"
+      },
+      "created": "A fost creată o nouă entitate Address cu identificatorul {{ param }}",
+      "updated": "Address cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Address cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Address {{ id }}?"
+      },
+      "detail": {
+        "title": "Address"
+      },
+      "streetAddress": "Street Address",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "stateProvince": "State Province"
+    }
+  }
+}
