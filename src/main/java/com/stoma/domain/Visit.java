@@ -51,14 +51,6 @@ public class Visit implements Serializable {
     @Column(name = "cost")
     private Long cost;
 
-    @ManyToOne
-    @JsonIgnoreProperties(value = "visits", allowSetters = true)
-    private Person patientId;
-
-    @ManyToOne
-    @JsonIgnoreProperties(value = "visits", allowSetters = true)
-    private Person doctorId;
-
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
         return id;
@@ -185,31 +177,6 @@ public class Visit implements Serializable {
         this.cost = cost;
     }
 
-    public Person getPatientId() {
-        return patientId;
-    }
-
-    public Visit patientId(Person person) {
-        this.patientId = person;
-        return this;
-    }
-
-    public void setPatientId(Person person) {
-        this.patientId = person;
-    }
-
-    public Person getDoctorId() {
-        return doctorId;
-    }
-
-    public Visit doctorId(Person person) {
-        this.doctorId = person;
-        return this;
-    }
-
-    public void setDoctorId(Person person) {
-        this.doctorId = person;
-    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override

@@ -38,10 +38,6 @@ public class Person implements Serializable {
     @Column(name = "address_id")
     private Long addressId;
 
-    @ManyToOne
-    @JsonIgnoreProperties(value = "people", allowSetters = true)
-    private Address addressId;
-
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
         return id;
@@ -116,18 +112,6 @@ public class Person implements Serializable {
         this.addressId = addressId;
     }
 
-    public Address getAddressId() {
-        return addressId;
-    }
-
-    public Person addressId(Address address) {
-        this.addressId = address;
-        return this;
-    }
-
-    public void setAddressId(Address address) {
-        this.addressId = address;
-    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
