@@ -1,0 +1,50 @@
+entity Person {
+	id Long,
+    firstName String,
+    lastName String,
+    email String,
+    phoneNumber String,
+    addressId Long
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Address {
+	id Long,
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+entity Visit {
+	id Long,
+    createdDate Instant,
+    updatedDate Instant,
+    targetDate Instant,
+    durationMin Long,
+    patientId Long,
+    doctorId Long,
+	title String,
+	description String,
+    cost Long
+}
+
+relationship ManyToOne {
+	Person{addressId} to Address,
+    Visit{patientId} to Person,
+    Visit{doctorId} to Person
+}
+
+// Set pagination options
+paginate Visit with infinite-scroll
+paginate Person with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl// except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
