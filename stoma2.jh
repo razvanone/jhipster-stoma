@@ -1,0 +1,166 @@
+entity Region {
+	regionName String
+}
+
+entity Country {
+	countryName String
+}
+
+entity Address {
+	streetAddress String required,
+	postalCode String,
+	city String required,
+	county String	
+}
+
+entity Patient {
+	firstName String required,
+    lastName String required,
+    phoneNumber String required,
+    email String,
+    age Long required,
+    gender Gender required
+}
+
+entity Visit {
+	startTime Instant required,
+    durationMin Long required,
+    completed Boolean,
+    description String,
+    comments String,
+    cost Long
+}
+
+entity Material {
+	name String required,
+    description String required,
+    unitCost Long required,
+    quantity Long required
+}
+
+relationship OneToMany {
+	Address{patient(lastName)} to Patient
+}
+
+relationship ManyToOne {
+	Visit{patient(lastName)} to Patient
+    Patient{address(streetAddress)} to Address
+}
+
+/**
+ *relationship ManyToOne {
+ *	Person{doctor} to Person
+ *}
+ */
+
+// an ignored comment
+/** not an ignored comment */
+entity Location {
+	streetAddress String,
+	postalCode String,
+	city String,
+	stateProvince String
+}
+
+entity Department {
+	departmentName String required
+}
+
+/**
+ * Task entity.
+ * @author The JHipster team.
+ */
+entity Task {
+	title String,
+	description String
+}
+
+/**
+ * The Employee entity.
+ */
+entity Employee {
+	/**
+	* The firstname attribute.
+	*/
+	firstName String,
+	lastName String,
+	email String,
+	phoneNumber String,
+	hireDate Instant,
+	salary Long,
+	commissionPct Long
+}
+
+entity Job {
+	jobTitle String,
+	minSalary Long,
+	maxSalary Long
+}
+
+entity JobHistory {
+	startDate Instant,
+	endDate Instant,
+	language Language
+}
+
+enum Gender {
+	MALE, FEMALE
+}
+
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+relationship OneToOne {
+	Country{region} to Region
+}
+
+relationship OneToOne {
+	Location{country} to Country
+}
+
+relationship OneToOne {
+	Department{location} to Location
+}
+
+relationship ManyToMany {
+	Job{task(title)} to Task{job},
+    Visit{material(name)} to Material{visit}
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Employee to Job{employee},
+	/**
+	* A relationship
+	*/
+	Department to
+	/**
+	* Another side of the same relationship
+	*/
+	Employee{department}
+}
+
+relationship ManyToOne {
+	Employee{manager} to Employee
+}
+
+// defining multiple oneToOne relationships
+relationship OneToOne {
+	JobHistory{job} to Job,
+	JobHistory{department} to Department,
+	JobHistory{employee} to Employee
+}
+
+// Set pagination options
+paginate JobHistory, Employee with infinite-scroll
+paginate Job, Visit, Patient, Address with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
