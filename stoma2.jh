@@ -1,0 +1,51 @@
+
+entity Patient {
+	firstName String required,
+    lastName String required,
+    phoneNumber String required,
+    address String,
+    email String,
+    age Long required,
+    gender Gender required
+}
+
+enum Gender {
+	MALE, FEMALE
+}
+
+entity Visit {
+	startTime Instant required,
+    durationMin Long required,
+    completed Boolean,
+    description String,
+    comments String,
+    cost Long
+}
+
+entity Material {
+	name String required,
+    description String required,
+    unitCost Long required,
+    quantity Long required
+}
+
+relationship ManyToOne {
+	Visit{patient(lastName)} to Patient
+}
+
+relationship ManyToMany {
+    Visit{material(name)} to Material{visit}
+}
+
+// Set pagination options
+// paginate JobHistory, Employee with infinite-scroll
+paginate Visit, Patient, Material with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl // except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
