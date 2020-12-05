@@ -10,6 +10,9 @@
         "bankAccount": "ContBancar",
         "label": "Etichetă",
         "operation": "Operație",
+        "patient": "Patient",
+        "visit": "Visit",
+        "material": "Material",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
