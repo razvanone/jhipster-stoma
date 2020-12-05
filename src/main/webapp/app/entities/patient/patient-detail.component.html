@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="patient">
+            <h2><span jhiTranslate="stomaApp.patient.detail.title">Patient</span> {{ patient.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="stomaApp.patient.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{ patient.firstName }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.patient.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ patient.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.patient.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{ patient.phoneNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.patient.address">Address</span></dt>
+                <dd>
+                    <span>{{ patient.address }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.patient.email">Email</span></dt>
+                <dd>
+                    <span>{{ patient.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.patient.age">Age</span></dt>
+                <dd>
+                    <span>{{ patient.age }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.patient.gender">Gender</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'stomaApp.Gender.' + patient.gender }}">{{ patient.gender }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/patient', patient.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
