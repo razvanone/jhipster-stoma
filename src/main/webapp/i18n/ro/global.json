@@ -10,6 +10,18 @@
         "bankAccount": "ContBancar",
         "label": "Etichetă",
         "operation": "Operație",
+        "region": "Region",
+        "country": "Country",
+        "address": "Address",
+        "patient": "Patient",
+        "visit": "Visit",
+        "material": "Material",
+        "location": "Location",
+        "department": "Department",
+        "task": "Task",
+        "employee": "Employee",
+        "job": "Job",
+        "jobHistory": "Job History",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

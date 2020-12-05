@@ -1,0 +1,29 @@
+{
+  "stomaApp": {
+    "visit": {
+      "home": {
+        "title": "Visits",
+        "createLabel": "Creeare o nouă entitate Visit",
+        "createOrEditLabel": "Creeare sau editare Visit",
+        "notFound": "No Visits found"
+      },
+      "created": "A fost creată o nouă entitate Visit cu identificatorul {{ param }}",
+      "updated": "Visit cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Visit cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Visit {{ id }}?"
+      },
+      "detail": {
+        "title": "Visit"
+      },
+      "startTime": "Start Time",
+      "durationMin": "Duration Min",
+      "completed": "Completed",
+      "description": "Description",
+      "comments": "Comments",
+      "cost": "Cost",
+      "patient": "Patient",
+      "material": "Material"
+    }
+  }
+}
