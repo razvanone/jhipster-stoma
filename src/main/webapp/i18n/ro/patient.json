@@ -1,0 +1,29 @@
+{
+  "stomaApp": {
+    "patient": {
+      "home": {
+        "title": "Patients",
+        "createLabel": "Creeare o nouă entitate Patient",
+        "createOrEditLabel": "Creeare sau editare Patient",
+        "notFound": "No Patients found"
+      },
+      "created": "A fost creată o nouă entitate Patient cu identificatorul {{ param }}",
+      "updated": "Patient cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Patient cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Patient {{ id }}?"
+      },
+      "detail": {
+        "title": "Patient"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "age": "Age",
+      "gender": "Gender",
+      "address": "Address",
+      "address": "Address"
+    }
+  }
+}
