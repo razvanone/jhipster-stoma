@@ -1,0 +1,46 @@
+{
+  "name": "Address",
+  "fields": [
+    {
+      "fieldName": "streetAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "postalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "stateProvince",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "person",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "person"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "doctor",
+      "otherEntityRelationshipName": "address",
+      "relationshipName": "doctor"
+    }
+  ],
+  "changelogDate": "20201205115611",
+  "entityTableName": "address",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

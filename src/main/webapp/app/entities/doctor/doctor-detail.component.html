@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="doctor">
+            <h2><span jhiTranslate="stomaApp.doctor.detail.title">Doctor</span> {{ doctor.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="stomaApp.doctor.firstName">First Name</span></dt>
+                <dd>
+                    <span>{{ doctor.firstName }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.doctor.lastName">Last Name</span></dt>
+                <dd>
+                    <span>{{ doctor.lastName }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.doctor.phoneNumber">Phone Number</span></dt>
+                <dd>
+                    <span>{{ doctor.phoneNumber }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.doctor.email">Email</span></dt>
+                <dd>
+                    <span>{{ doctor.email }}</span>
+                </dd>
+                <dt><span jhiTranslate="stomaApp.doctor.address">Address</span></dt>
+                <dd>
+                    <div *ngIf="doctor.addressId">
+                        <a [routerLink]="['/address', doctor.addressId, 'view']">{{ doctor.addressId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/doctor', doctor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "stomaApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "createLabel": "Creeare o nouă entitate Person",
+        "createOrEditLabel": "Creeare sau editare Person",
+        "notFound": "No People found"
+      },
+      "created": "A fost creată o nouă entitate Person cu identificatorul {{ param }}",
+      "updated": "Person cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Person cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Person {{ id }}?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "visit": "Visit",
+      "address": "Address"
+    }
+  }
+}

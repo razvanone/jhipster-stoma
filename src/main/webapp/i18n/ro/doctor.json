@@ -1,0 +1,27 @@
+{
+  "stomaApp": {
+    "doctor": {
+      "home": {
+        "title": "Doctors",
+        "createLabel": "Creeare o nouă entitate Doctor",
+        "createOrEditLabel": "Creeare sau editare Doctor",
+        "notFound": "No Doctors found"
+      },
+      "created": "A fost creată o nouă entitate Doctor cu identificatorul {{ param }}",
+      "updated": "Doctor cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Doctor cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Doctor {{ id }}?"
+      },
+      "detail": {
+        "title": "Doctor"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "visit": "Visit",
+      "address": "Address"
+    }
+  }
+}
