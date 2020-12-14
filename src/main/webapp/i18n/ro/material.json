@@ -1,0 +1,27 @@
+{
+  "stomaApp": {
+    "material": {
+      "home": {
+        "title": "Materials",
+        "createLabel": "Creeare o nouă entitate Material",
+        "createOrEditLabel": "Creeare sau editare Material",
+        "notFound": "No Materials found"
+      },
+      "created": "A fost creată o nouă entitate Material cu identificatorul {{ param }}",
+      "updated": "Material cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Material cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Material {{ id }}?"
+      },
+      "detail": {
+        "title": "Material"
+      },
+      "name": "Name",
+      "description": "Description",
+      "unitCost": "Unit Cost",
+      "quantity": "Quantity",
+      "user": "User",
+      "visit": "Visit"
+    }
+  }
+}

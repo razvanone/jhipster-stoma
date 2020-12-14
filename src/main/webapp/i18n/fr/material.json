@@ -1,0 +1,27 @@
+{
+  "stomaApp": {
+    "material": {
+      "home": {
+        "title": "Materials",
+        "createLabel": "Créer un nouveau Material",
+        "createOrEditLabel": "Créer ou éditer un Material",
+        "notFound": "Aucun Material trouvé"
+      },
+      "created": "Un nouveau Material a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Material avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Material avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Material {{ id }} ?"
+      },
+      "detail": {
+        "title": "Material"
+      },
+      "name": "Name",
+      "description": "Description",
+      "unitCost": "Unit Cost",
+      "quantity": "Quantity",
+      "user": "User",
+      "visit": "Visit"
+    }
+  }
+}

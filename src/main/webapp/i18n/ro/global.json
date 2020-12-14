@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "Stoma",
+    "title": "Cabinet stomatologic",
     "browsehappy": "Folosiți un browser <strong>vechi</strong>. Va rugăm <a href=\"http://browsehappy.com/?locale=en\"> să îl actualizați</a> pentru o experiență îmbunătațită.",
     "menu": {
       "home": "Acasă",
@@ -10,6 +10,9 @@
         "bankAccount": "ContBancar",
         "label": "Etichetă",
         "operation": "Operație",
+        "patient": "Pacient",
+        "visit": "Vizită/Programare",
+        "material": "Materiale",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
